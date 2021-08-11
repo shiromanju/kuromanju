@@ -8,16 +8,11 @@
     </head>
     <body>
         <h1>Blog Name</h1>
-        <div class='posts'>
-            @foreach ($posts as $post)
                <div class='post'>
-                  <a href='/posts/{{ $post->id }}'><h2 class='title'>{{$post->title}}</h2></a>
+                  <h2 class='title'>{{$post->title}}</h2>
                   <p class='body'>{{ $posts->body}}</p>
-               </div>
-            @endforeach
-        </div>
-        <div class='pagenate'>
-            {{$post->links() }}
-        </div>
+                  <p class='updated_at'>{{ $posts->updated_at }}</p>
+         </div>
+         <div class='back'>[<a href='/'>back</a>]</div>
     </body>
 </html>
